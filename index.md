@@ -25,7 +25,7 @@ The landing page is presented to users when they visit the top-level URL to the 
 
 ![](images/landing-page.png)
 
-### Home Pages (User, Restaurant Admin, Admin)
+### Home Pages (User, Vendor, Admin)
 
 Campus Cravings provides three separate home pages that present the contents of the database organized in various ways.
 
