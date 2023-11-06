@@ -153,5 +153,6 @@ There are a number of simple enhancements you can make to the system to become b
 
 ## Team
 
-Campus Cravings will be designed, implemented, and maintained by [](https://github.com/johnnyC808),  [](https://github.com/kylebueche), [](https://github.com/qckapiu), and [](https://github.com/TravisQuesenberry).
+Campus Cravings will be designed, implemented, and maintained by [Johnathan Callejo](https://github.com/johnnyC808), [Kyle Bueche](https://github.com/kylebueche), [Cody Kau](https://github.com/qckapiu), and [Travis Quesenberry](https://github.com/TravisQuesenberry).
+
 
