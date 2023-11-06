@@ -79,6 +79,12 @@ Vendors can define new menu items within their restaurant with the Add Menu Item
 
 ![](images/add-menu-item-page.png)
 
+### Restaurant Location page
+
+The locations of various restaurants (including food trucks) will be shown on a UH campus map and marked by the restaurant's logo:
+
+![](images/restauraunt-map-page.png)
+
 ## Community Feedback (NEED TO CHANGE FORM URL)
 
 We are interested in your experience using Campus Cravings!  If you would like, please take a couple of minutes to fill out the [Campus Cravings Feedback Form](https://forms.gle/hBHdccQEbm4YNfPd6). It contains only five short questions and will help us understand how to improve the system.
