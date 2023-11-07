@@ -161,4 +161,4 @@ There are a number of simple enhancements you can make to the system to become b
 
 Campus Cravings will be designed, implemented, and maintained by [Johnathan Callejo](https://github.com/johnnyC808), [Kyle Bueche](https://github.com/kylebueche), [Cody Kau](https://github.com/qckapiu), and [Travis Quesenberry](https://github.com/TravisQuesenberry).
 
-
+[Team Contract](https://docs.google.com/document/d/1ysidk97ZZfze5XyUyViEq0-vuA007ZVoCBbuy5-fYkg/edit?usp=sharing)
