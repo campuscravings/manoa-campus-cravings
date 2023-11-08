@@ -3,11 +3,8 @@
 ## Table of contents
 
 * [Overview](#overview)
-* [Deployment](#deployment)
 * [User Guide](#user-guide)
-* [Community Feedback](#community-feedback)
 * [Development History](#development-history)
-* [Continuous Integration](#continuous-integration)
 * [Example enhancements](#example-enhancements)
 * [Team](#team)
 
@@ -85,29 +82,6 @@ The locations of various restaurants (including food trucks) will be shown on a 
 
 ![](images/restauraunt-map-page.png)
 
-## Community Feedback (NEED TO CHANGE FORM URL)
-
-We are interested in your experience using Campus Cravings!  If you would like, please take a couple of minutes to fill out the [Campus Cravings Feedback Form](https://forms.gle/hBHdccQEbm4YNfPd6). It contains only five short questions and will help us understand how to improve the system.
-
-## From mockup to production (TODO)
-
-Bowfolios is meant to illustrate the use of Meteor for developing an initial proof-of-concept prototype.  For a production application, several additional security-related changes must be implemented:
-
-* Use of email-based password specification for users, and/or use of an alternative authentication mechanism.
-* Use of https so that passwords are sent in encrypted format.
-* Removal of the insecure package, and the addition of Meteor Methods to replace client-side DB updates.
-
-(Note that these changes do not need to be implemented for ICS 314, although they are relatively straightforward to accomplish.)
-
-## Continuous Integration (TODO)
-
-![ci-badge](https://github.com/bowfolios/bowfolios/workflows/ci-bowfolios/badge.svg)
-
-BowFolios uses [GitHub Actions](https://docs.github.com/en/free-pro-team@latest/actions) to automatically run ESLint and TestCafe each time a commit is made to the default branch.  You can see the results of all recent "workflows" at [https://github.com/bowfolios/bowfolios/actions](https://github.com/bowfolios/bowfolios/actions).
-
-The workflow definition file is quite simple and is located at
-[.github/workflows/ci.yml](https://github.com/bowfolios/bowfolios/blob/main/.github/workflows/ci.yml).
-
 ## Development History
 
 The development process for Campus Cravings conformed to [Issue Driven Project Management](https://courses.ics.hawaii.edu/ics314f23/modules/project-management/) practices. In a nutshell:
@@ -126,27 +100,27 @@ The following sections document the development history of Campus Cravings.
 
 The goal of Milestone 1 was to create a set of HTML pages providing a mockup of the pages in the system.
 
-Milestone 1 was managed using [Campus Cravings GitHub Project Board M1](https://github.com/campuscravings/campus-cravings.github.io/projects/1):
+Milestone 1 was managed using [Campus Cravings GitHub Project Board M1](https://github.com/orgs/campuscravings/projects/1):
 
 ![](images/project-board-1.png)
 
 ### Milestone 2: Data model development
 
-The goal of Milestone 2 was to implement the data model: the underlying set of Mongo Collections and the operations upon them that would support the Campus Cravings application.
+<!-- The goal of Milestone 2 was to implement the data model: the underlying set of Mongo Collections and the operations upon them that would support the Campus Cravings application.
 
 Milestone 2 was managed using [Campus Cravings GitHub Project Board M2](https://github.com/campuscravings/campus-cravings.github.io/projects/2):
 
-![](images/project-board-2.png)
+![](images/project-board-2.png) -->
 
-## Milestone 3: Final touches
+### Milestone 3: Final touches
 
-The goal of Milestone 3 was to clean up the code base and fix minor UI issues.
+<!-- The goal of Milestone 3 was to clean up the code base and fix minor UI issues.
 
 Milestone 3 was managed using [Campus Cravings GitHub Project Board M3](https://github.com/campuscravings/campus-cravings.github.io/projects/3):
 
 ![](images/project-board-3.png)
 
-As of the time of writing, this screenshot shows that there is an ongoing task (i.e. this writing).
+As of the time of writing, this screenshot shows that there is an ongoing task (i.e. this writing). -->
 
 ## Example enhancements
 
