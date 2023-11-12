@@ -1,5 +1,6 @@
 import { Mongo } from 'meteor/mongo';
 import SimpleSchema from 'simpl-schema';
+import { string } from 'prop-types';
 
 /** Encapsulates state and variable values for this collection. */
 class ProfilesCollection {
@@ -14,8 +15,9 @@ class ProfilesCollection {
       firstName: { type: String, optional: true },
       lastName: { type: String, optional: true },
       bio: { type: String, optional: true },
-      title: { type: String, optional: true },
       picture: { type: String, optional: true },
+      foods: { type: Array, optional: true },
+      'foods.$': { type: String },
     });
     // Ensure collection documents obey schema.
     this.collection.attachSchema(this.schema);

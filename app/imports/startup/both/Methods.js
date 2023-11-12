@@ -4,6 +4,7 @@ import { Profiles } from '../../api/profiles/Profiles';
 import { ProfilesInterests } from '../../api/profiles/ProfilesInterests';
 import { ProfilesProjects } from '../../api/profiles/ProfilesProjects';
 import { ProjectsInterests } from '../../api/projects/ProjectsInterests';
+import { Foods } from '../../api/foods/Foods';
 
 /**
  * In Bowfolios, insecure mode is enabled, so it is possible to update the server's Mongo database by making
@@ -28,7 +29,15 @@ import { ProjectsInterests } from '../../api/projects/ProjectsInterests';
  * Note that it would be even better if each method was wrapped in a transaction so that the database would be rolled
  * back if any of the intermediate updates failed. Left as an exercise to the reader.
  */
+const updateFoodsMethod = 'Foods.update';
+Meteor.methods({
+  insertDefaultFoods: function () {
+    const defaultFoods = ['Breakfast', 'Lunch', 'Dinner'];
 
+    // Insert the default foods into the collection
+    Foods.insert({ foods: defaultFoods });
+  },
+});
 const updateProfileMethod = 'Profiles.update';
 
 /**
@@ -37,12 +46,14 @@ const updateProfileMethod = 'Profiles.update';
  * updated situation specified by the user.
  */
 Meteor.methods({
-  'Profiles.update'({ email, firstName, lastName, bio, title, picture, interests, projects }) {
-    Profiles.collection.update({ email }, { $set: { email, firstName, lastName, bio, title, picture } });
+  'Profiles.update'({ email, firstName, lastName, bio, title, picture, interests, projects, foods }) {
+    Profiles.collection.update({ email }, { $set: { email, firstName, lastName, bio, title, picture, foods } });
     ProfilesInterests.collection.remove({ profile: email });
     ProfilesProjects.collection.remove({ profile: email });
     interests.map((interest) => ProfilesInterests.collection.insert({ profile: email, interest }));
     projects.map((project) => ProfilesProjects.collection.insert({ profile: email, project }));
+    foods.map((food) => Foods.collection.insert({ profile: email, food }));
+
   },
 });
 
@@ -65,4 +76,4 @@ Meteor.methods({
   },
 });
 
-export { updateProfileMethod, addProjectMethod };
+export { updateProfileMethod, addProjectMethod, updateFoodsMethod };

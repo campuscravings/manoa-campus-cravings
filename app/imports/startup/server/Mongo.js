@@ -7,6 +7,7 @@ import { Profiles } from '../../api/profiles/Profiles';
 import { ProfilesProjects } from '../../api/profiles/ProfilesProjects';
 import { ProfilesInterests } from '../../api/profiles/ProfilesInterests';
 import { Interests } from '../../api/interests/Interests';
+import { Foods } from '../../api/foods/Foods';
 
 /* eslint-disable no-console */
 
@@ -22,6 +23,9 @@ function createUser(email, role) {
 /** Define an interest.  Has no effect if interest already exists. */
 function addInterest(interest) {
   Interests.collection.update({ name: interest }, { $set: { name: interest } }, { upsert: true });
+}
+function addFood(food) {
+  Foods.collection.update({ name: food }, { $set: { name: food } });
 }
 
 /** Defines a new user and associated profile. Error if user already exists. */
@@ -47,6 +51,14 @@ function addProject({ name, homepage, description, interests, picture }) {
   interests.map(interest => addInterest(interest));
 }
 
+if (Meteor.settings.defaultFoods) {
+  console.log('Creating default foods');
+  // eslint-disable-next-line array-callback-return
+  Meteor.settings.defaultFoods.map(food => {
+    console.log(`Processing food: ${food}`);
+    addFood(food);
+  });
+}
 /** Initialize DB if it appears to be empty (i.e. no users defined.) */
 if (Meteor.users.find().count() === 0) {
   if (Meteor.settings.defaultProjects && Meteor.settings.defaultProfiles) {

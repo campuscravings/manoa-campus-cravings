@@ -1,4 +1,10 @@
 {
+  "defaultFoods": [
+    "Breakfast",
+    "Lunch",
+    "Dinner"
+  ],
+
   "defaultProfiles": [
     {
       "firstName": "Philip",
