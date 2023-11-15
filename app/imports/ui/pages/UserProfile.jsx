@@ -54,7 +54,7 @@ const UserProfile = () => {
   const profile = Profiles.collection.findOne({ email });
   const model = _.extend({}, profile, { foods });
   return ready ? (
-    <Container id={PageIDs.homePage} className="justify-content-center" style={pageStyle}>
+    <Container id={PageIDs.userProfilePage} className="justify-content-center" style={pageStyle}>
       <Col>
         <Col className="justify-content-center text-center"><h2>Your Profile</h2></Col>
         <AutoForm model={model} schema={bridge} onSubmit={data => submit(data)}>
