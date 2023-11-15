@@ -15,7 +15,6 @@ class ProfilesCollection {
       firstName: { type: String, optional: true },
       lastName: { type: String, optional: true },
       bio: { type: String, optional: true },
-      title: { type: String, optional: true },
       picture: { type: String, optional: true },
       foods: { type: Array, optional: true },
       'foods.$': { type: String },

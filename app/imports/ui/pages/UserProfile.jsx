@@ -21,7 +21,6 @@ const makeSchema = (allFoods) => new SimpleSchema({
   firstName: { type: String, label: 'First', optional: true },
   lastName: { type: String, label: 'Last', optional: true },
   bio: { type: String, label: 'Biographical statement', optional: true },
-  title: { type: String, label: 'Title', optional: true },
   picture: { type: String, label: 'Picture URL', optional: true },
   foods: { type: Array, label: 'Favorite Foods', optional: true },
   'foods.$': { type: String, allowedValues: allFoods },
